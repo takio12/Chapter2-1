@@ -24,8 +24,8 @@ namespace Chapter2_1
             };
 
             foreach(var s in songs)
-            {
-                Console.WriteLine($"{s.Title}{s.ArtistName}{s.Length}");
+            {                              //時間間隔の区切り記号の文法が定義されていないため、\がいる。
+                Console.WriteLine(@"{0}{1}{2:m\:ss}",s.Title,s.ArtistName,TimeSpan.FromSeconds(s.Length));
             }
 
         }
